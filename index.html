@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="icon" type="image" href="cloud.png">
+  <link rel="stylesheet" href="sujan.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Today<img src="cloud.png" alt="Clouds" id="weatherIcon2"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Tommorow</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about us.html">About us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Choose your style
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Day Before Yesterday</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Yesterday</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Today</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Tommorow</a></li>
+            </ul>
+          </li>
+          <!-- <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li> -->
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="month">
+    <ul>
+      <li class="prev">&#10094;</li>
+      <li class="next">&#10095;</li>
+      <li>August<br>
+        <span style="font-size:18px"><select name="Choose Year" id="select" required>
+            <option value="year">2023</option>
+            <option value="year">2022</option>
+            <option value="year">2021</option>
+            <option value="year">2020</option>
+            <option value="year">2019</option>
+            <option value="year">2018</option>
+            <option value="year">2017</option>
+            <option value="year">2016</option>
+            <option value="year">2015</option>
+            <option value="year">2014</option>
+            <option value="year">2013</option>
+            <option value="year">2012</option>
+        </span>
+      </li></select>
+    </ul>
+  </div>
+  <div class="week">
+    <ul class="weekdays">
+      <li><b>Monday</b></li>
+      <li><b>Tuesday</b></li>
+      <li><b>Wednesday</b></li>
+      <li><b>Thursday</b></li>
+      <li><b>Friday</b></li>
+      <li><b>Saturday</b></li>
+      <li><b>Sunday</b></li>
+    </ul>
+  </div>
+  <div class="day">
+    <ul class="days">
+      <li></li>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li><span class="active">9</span></li>
+      <li>10</li>
+      <li>11</li>
+      <li>12</li>
+      <li>13</li>
+      <li>14</li>
+      <li>15</li>
+      <li>16</li>
+      <li>17</li>
+      <li>18</li>
+      <li>19</li>
+      <li>20</li>
+      <li>21</li>
+      <li>22</li>
+      <li>23</li>
+      <li>24</li>
+      <li>25</li>
+      <li>26</li>
+      <li>27</li>
+      <li>28</li>
+      <li>29</li>
+      <li>30</li>
+      <li>31</li>
+    </ul>
+  </div>
+  <br>
+  <div class="box1">
+    Please Enter Your Location,as Per You Want to Search
+  </div>
+
+  <section id="box">
+    <div class="mainContainer">
+      <div class="searchInput">
+        <input type="text" placeholder="Enter City Name" id="searchInput" value="BataNagar" />
+        <button id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <div class="weatherDetails">
+        <div class="weatherIcon">
+          <img src="cloud.png" alt="Clouds" id="weatherIcon">
+        </div>
+        <div class="cityDetails">
+          <div class="weather" id="weather"></div>
+          <div class="desc"></div>
+        </div>
+        <div class="windDetails">
+          <div class="humidityBox">
+            <img
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgr7XehXJkOPXbZr8xL42sZEFYlS-1fQcvUMsS2HrrV8pcj3GDFaYmYmeb3vXfMrjGXpViEDVfvLcqI7pJ03pKb_9ldQm-Cj9SlGW2Op8rxArgIhlD6oSLGQQKH9IqH1urPpQ4EAMCs3KOwbzLu57FDKv01PioBJBdR6pqlaxZTJr3HwxOUlFhC9EFyw/s320/thermometer.png"
+              alt="Humidity">
+            <div>
+              <p class="humidity"></p><span>Humidity</span>
+            </div>
+          </div>
+          <div class="windSpeed">
+            <img
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyaIguDPkbBMnUDQkGp3wLRj_kvd_GIQ4RHQar7a32mUGtwg3wHLIe0ejKqryX8dnJu-gqU6CBnDo47O7BlzCMCwRbB7u0Pj0CbtGwtyhd8Y8cgEMaSuZKrw5-62etXwo7UoY509umLmndsRmEqqO0FKocqTqjzHvJFC2AEEYjUax9tc1JMWxIWAQR4g/s320/wind.png">
+            <div>
+              <p id="windSpeed"></p><span>Wind Speed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section id="card">
+    <div class="row">
+      <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Weather News </h5>
+            <p class="card-text">Weather Today (August 8): Heavy to Very Heavy Rains Over Assam, Meghalaya, West Bengal,
+              East Uttar Pradesh, Bihar.</p>
+            <a href="#" class="btn btn-primary">Tap for more details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Important News
+              <br>
+              <br>
+            </h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
